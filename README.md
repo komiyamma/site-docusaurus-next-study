@@ -1,6 +1,5 @@
 # next-study.komiyamma.net
 
-
 **Next.js** の初心者～中級者向けの学習教材を題材に、
 **Docusaurus** を採用し、Markdown を正とした SSG (Static Site Generation) 環境の構築ノウハウ検証を兼ねたリポジトリ。  
 
