@@ -4,7 +4,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import { WebSiteJsonLd } from '../components/SEO/StructuredData';
 
-const CategorySvg = require('@site/static/img/category.svg').default;
+const CategorySvg = require('@site/static/img/nextjs_logo.svg').default;
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();

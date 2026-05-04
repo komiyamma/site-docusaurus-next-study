@@ -6,18 +6,14 @@ import Link from '@docusaurus/Link';
 import {useLocation} from '@docusaurus/router';
 import {useNavbarMobileSidebar} from '@docusaurus/theme-common/internal';
 import {categories} from '@site/src/components/CategoryBar';
+import {getModuleNumberFromPath} from '@site/src/data/nextModules';
 import styles from './styles.module.css';
 
 type Props = WrapperProps<typeof PrimaryMenuType>;
 
-function getActiveFolder(pathname: string): string | null {
-  const match = pathname.match(/^\/docs\/([^/]+)\//);
-  return match ? match[1] : null;
-}
-
 export default function PrimaryMenuWrapper(props: Props): React.ReactNode {
   const {pathname} = useLocation();
-  const activeFolder = getActiveFolder(pathname);
+  const moduleNumber = getModuleNumberFromPath(pathname);
   const mobileSidebar = useNavbarMobileSidebar();
 
   return (
@@ -26,9 +22,8 @@ export default function PrimaryMenuWrapper(props: Props): React.ReactNode {
         <div className={styles.categorySectionTitle}>カテゴリ</div>
         <ul className="menu__list">
           {categories.map((cat) => {
-            const folderMatch = cat.path.match(/^\/docs\/([^/]+)\//);
-            const catFolder = folderMatch ? folderMatch[1] : '';
-            const isActive = activeFolder === catFolder;
+            const isActive =
+              moduleNumber !== null && moduleNumber >= cat.start && moduleNumber <= cat.end;
 
             return (
               <li key={cat.sidebarId} className="menu__list-item">

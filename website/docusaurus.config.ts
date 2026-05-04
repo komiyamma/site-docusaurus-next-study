@@ -7,9 +7,9 @@ import * as path from 'path';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Cloudflareの学習教材',
-  tagline: 'Cloudflare学習教材（24章アウトライン）',
-  favicon: 'img/cloudflare_icon.svg',
+  title: 'Next.jsの学習教材',
+  tagline: 'Next.js App Router学習教材（全284章アウトライン）',
+  favicon: 'img/nextjs_logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -17,7 +17,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://cloudflare-study.komiyamma.net',
+  url: 'https://next-study.komiyamma.net',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -25,7 +25,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'komiyamma', // Usually your GitHub org/user name.
-  projectName: 'site-docusaurus-cloudflare_study', // Usually your repo name.
+  projectName: 'site-docusaurus-next-study', // Usually your repo name.
 
   onBrokenLinks: 'warn',
 
@@ -125,11 +125,11 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Cloudflare学習',
+      title: 'Next.js学習',
       logo: {
-        alt: 'Cloudflare',
-        src: 'img/cloudflare_icon.svg',
-        srcDark: 'img/cloudflare_icon.svg',
+        alt: 'Next.js',
+        src: 'img/nextjs_logo.svg',
+        srcDark: 'img/nextjs_logo.svg',
       },
       items: [
         {
@@ -140,7 +140,7 @@ const config: Config = {
           target: '_self',
         },
         {
-          href: 'https://github.com/komiyamma/site-docusaurus-cloudflare_study',
+          href: 'https://github.com/komiyamma/site-docusaurus-next-study',
           label: 'GitHub',
           position: 'right',
         },
