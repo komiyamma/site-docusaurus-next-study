@@ -125,7 +125,7 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Next.js学習',
+      title: 'Next.js',
       logo: {
         alt: 'Next.js',
         src: 'img/nextjs_logo.svg',
